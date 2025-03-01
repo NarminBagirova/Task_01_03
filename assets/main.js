@@ -31,7 +31,7 @@ function createShowCard(show) {
 
     cardElement.innerHTML = `
         <div class="card shadow-sm">
-            <img src="${show.image?.medium || 'https://via.placeholder.com/210x295'}" class="card-img-top" alt="${show.name}">
+            <img src="${show.image?.medium}" class="card-img-top" alt="${show.name}">
             <div class="card-body">
                 <h5 class="card-title">${show.name}</h5>
                 <p class="card-text">Premiere: ${show.premiered || 'N/A'}</p>
@@ -66,7 +66,7 @@ function renderShowDetails(show) {
     showDetailsContainer.innerHTML = `
         <div class="details-container">
             <div class="details-content">
-                <img src="${show.image?.original || 'https://via.placeholder.com/300x450'}" alt="${show.name}">
+                <img src="${show.image?.original}" alt="${show.name}">
                 <div class="summaryStyle">
                     <h1>${show.name}</h1>
                     <p>${show.summary || 'No summary available'}</p>
